@@ -1,0 +1,16 @@
+﻿"Motor Width"= 42.3'eg: For stepper motor Nema 17 = 42.3mm
+"Motor Hole Config Width"= 31'eg: For stepper motor Nema 17 = 31
+"Mounting Hole Diameter"= 3'eg: For Nema 17 3mm
+"Motor Depth"= 50'eg: For Nema 17 50mm
+"Exposed Shaft Length"= 22'eg: For Nema 17 22mm
+"Shaft Seround Depthr"= 2'eg: For Nema 17 2mm
+"Shaft Diameter"= 5'eg: For Nema 17 5mm
+"Top/Bottom Casing Depth"= 10'Guess
+"Mid Casing Depth"= "Motor Depth" - 2 * ( "Top/Bottom Casing Depth" )
+"Bearing Outter Diameter"= 22' From Spec 608z = 22mm
+"Shaft Clearance Hole"= "Shaft Diameter"+1.5'Guess
+"Bearing Ball Size"= 3.969'From Spec
+"Bearing Inner Case Inner Diameter"= 8'From Spec
+"Bearing Inner Case Outter Diameter"= 12.1'From Spec
+"Bearing Outter Case Inner Diameter"= 19.2'From Spec
+"Bearing Width"= 7'From Spec
