@@ -24,7 +24,7 @@ module ramps_fan_mount_cutoff_cube(width, height, depth, cutoff = 5, radius = 5)
 }
 
 
-module ramps_fan_mount(width = 64, height = 40, depth = 10, fanDia = 40, fanHoleDia = 3.1, fanHoleDist = 32, grooveDepth = 1.5, grooveHeight = 2.5, thickness = 3.5, $fn = 16)
+module ramps_fan_mount(width = 64, height = 40, depth = 10, fanDia = 40, fanHoleDia = 2.4, fanHoleDist = 32, grooveDepth = 1.5, grooveHeight = 2.5, thickness = 3.5, airGuide = 1.5, bossDia = 8, $fn = 16)
 {
 	difference() 
 	{
@@ -36,7 +36,7 @@ module ramps_fan_mount(width = 64, height = 40, depth = 10, fanDia = 40, fanHole
 				ramps_fan_mount_cutoff_cube(width, height, depth, cutoff = 4.5, radius = 5);
 		
 				// hollow, leave side air guide
-				translate([thickness, -thickness, 1.5]) {
+				translate([thickness, -thickness, airGuide]) {
 					ramps_fan_mount_cutoff_cube(width - 2 * thickness, height, depth + 2, cutoff = 	4.1, radius = 2.5);	
 				}
 		
@@ -48,11 +48,6 @@ module ramps_fan_mount(width = 64, height = 40, depth = 10, fanDia = 40, fanHole
 				translate([thickness - grooveDepth, 2, -1])
 					cube([width - 2 * thickness + grooveDepth * 2, grooveHeight, depth + 2]);
 
-				// fan hole
-				translate([width / 2, height + 1, depth / 2 + fanDia / 2 - fanHoleDia / 2])
-					rotate([90, 0, 0])
-						cylinder(r = fanDia / 2, h = thickness + 2);
-		
 				// smaller legs
 				translate([-1, height / 2 - depth, depth * 1.5])
 					rotate([0, 90, 0])
@@ -66,15 +61,20 @@ module ramps_fan_mount(width = 64, height = 40, depth = 10, fanDia = 40, fanHole
 			for (x = [(width - fanHoleDist) / 2, (width + fanHoleDist) / 2])
 				translate([x, height + 0, depth / 2])
 					rotate([90, 0, 0])
-						cylinder(r = 8 / 2, h = thickness + 2);
+						cylinder(r = bossDia / 2, h = thickness + 2);
 		}
 		
-				
+		
 		// fan mounting holes
 		for (x = [(width - fanHoleDist) / 2, (width + fanHoleDist) / 2])
 			translate([x, height + 1, depth / 2])
 				rotate([90, 0, 0])
 					cylinder(r = fanHoleDia / 2, h = thickness + 4);
+		
+		// fan hole
+		translate([width / 2, height + 1, depth / 2 + fanHoleDist / 2])
+			rotate([90, 0, 0])
+				cylinder(r = fanDia / 2 - 1, h = thickness + 10);
 		
 
 	}
