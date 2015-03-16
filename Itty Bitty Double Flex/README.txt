@@ -1,6 +1,6 @@
 Itty Bitty Double Flex Extruder
 -------------------------------
-Alpha Test 0.1.0 release
+Alpha Test 0.2.0 release
 
 This is an alpha test release.  It has not been significantlty tested.  Use at your own risk.
 
