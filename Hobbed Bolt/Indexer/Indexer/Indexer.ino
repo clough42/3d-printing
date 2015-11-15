@@ -10,12 +10,13 @@
 #define PIN_MS2    7
 #define PIN_MS1    8
 #define PIN_ENABLE 9
+#define PIN_LEDGND 12
 #define PIN_LED    13
 
 #define PIN_BUTTON_OUT   A0
 #define PIN_STEP_BUTTON  A1
-#define PIN_RUN_BUTTON   A2
-#define PIN_HOME_BUTTON  A3
+#define PIN_RUN_BUTTON   A3
+#define PIN_HOME_BUTTON  A2
 
 
 #define FULL_ROTATION_STEPS ((200L/20L)*36L*16L) // 200 steps, 20/36 belt ratio, 16 microsteps
@@ -50,11 +51,16 @@ void setup() {
   pinMode(PIN_SLEEP, OUTPUT);
   pinMode(PIN_RESET, OUTPUT);
   
+  
   pinMode(PIN_BUTTON_OUT, OUTPUT);
   digitalWrite(PIN_BUTTON_OUT, 0);
   pinMode(PIN_STEP_BUTTON, INPUT_PULLUP);
   pinMode(PIN_RUN_BUTTON, INPUT_PULLUP);
   pinMode(PIN_HOME_BUTTON, INPUT_PULLUP);
+  
+  pinMode(PIN_LED, OUTPUT);
+  pinMode(PIN_LEDGND, OUTPUT);
+  digitalWrite(PIN_LEDGND, LOW);
   
   digitalWrite(PIN_SLEEP, 1);  
   digitalWrite(PIN_RESET, 1);
