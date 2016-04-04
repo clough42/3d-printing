@@ -2,6 +2,12 @@ Itty Bitty Double FLEX V2 Extruder
 Printable Parts
 Clough42, LLC
 
+V2.1 Release
+
+Changes since V2.0:
+  Added longer versions of the Z probe arms for switches without levers
+  Fixed thickness of Hexagon groove mount
+
 For more information:  http://clough42.com/go/itty-bitty-double-flex-v2-extruder/
 
 Extruder Blocks:
@@ -25,6 +31,7 @@ E3dV6 Specific Parts (needed for E3D hot ends):
   PartCoolingDoubleFanShroud-e3dV6.STL -- Fan shroud for 40mm print cooling fan
   XCarriageShelf-e3dV6.STL -- Carriage shelf with opening for e3dV6 hot end cooling
   ZProbeArm-e3dv6.STL -- Z probe arm, longer length for e3dV6 hot ends
+  ZProbeArm-e3dv6-long.STL -- Z probe arm, longer for switches without levers
 
 Hexagon Specific Parts (needed for Hexagon hot ends):
   DoubleFlexGrooveMount-Hexagon.STL -- Double hot end groove mount
@@ -33,6 +40,7 @@ Hexagon Specific Parts (needed for Hexagon hot ends):
   TightDoubleHexagonShroud.STL -- Hot end cooling fan shroud for standard Hexagon hot ends
   XCarriageShelf-Hexagon.STL -- Carriage shelf with opening for Hexagon cooling fan
   ZProbeArm-Hexagon.STL -- Z probe arm, shorter length for Hexagon hot ends
+  ZProbeArm-Hexagon-long.STL -- Z probe arm, longer, for switches without levers
 
 Optional Parts
   AdjustableI3VXCarriagePlate.STL -- Replacement MakerFarm i3V X Carriage plate to allow leveling with an extra eccentric cam
