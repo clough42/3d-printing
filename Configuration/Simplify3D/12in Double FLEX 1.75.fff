@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="12&quot; Double FLEX 1.75" version="2016-05-07 17:33:41" app="S3D-Software 3.0.2">
+<profile name="12&quot; Double FLEX 1.75" version="2016-05-08 21:39:57" app="S3D-Software 3.0.2">
   <baseProfile>Leapfrog Creatr Dual</baseProfile>
   <printMaterial>ABS</printMaterial>
   <printQuality>Medium</printQuality>
@@ -36,7 +36,7 @@
     <useWipe>0</useWipe>
     <wipeDistance>5</wipeDistance>
   </extruder>
-  <primaryExtruder>0</primaryExtruder>
+  <primaryExtruder>1</primaryExtruder>
   <layerHeight>0.2</layerHeight>
   <topSolidLayers>3</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
@@ -72,10 +72,10 @@
   <oozeShieldExtruder>999</oozeShieldExtruder>
   <oozeShieldOffset>2</oozeShieldOffset>
   <oozeShieldOutlines>1</oozeShieldOutlines>
-  <oozeShieldSidewallShape>1</oozeShieldSidewallShape>
+  <oozeShieldSidewallShape>2</oozeShieldSidewallShape>
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
-  <infillExtruder>0</infillExtruder>
+  <infillExtruder>1</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
   <infillPercentage>40</infillPercentage>
@@ -86,7 +86,7 @@
   <infillAngles>45,-45</infillAngles>
   <overlapInfillAngles>0</overlapInfillAngles>
   <generateSupport>0</generateSupport>
-  <supportExtruder>0</supportExtruder>
+  <supportExtruder>1</supportExtruder>
   <supportInfillPercentage>30</supportInfillPercentage>
   <supportExtraInflation>0</supportExtraInflation>
   <denseSupportLayers>0</denseSupportLayers>
@@ -167,7 +167,7 @@
   <baudRateOverride>250000</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>; 12&quot; i3 &amp; i3v 1.75mm ABS for .40 E3Dv6 Double 2016-05-07,; BOTH EXTRUDERS,M80  ; power on,M42 P5 S255 ; light on,M190 S[bed0_temperature] ; wait for bed to heat up,M104 S[extruder0_temperature] T0 ; start heating T0,M104 S[extruder1_temperature] T1 ; start heating T1,G1 Z15 F120 ; lift nozzle,G28 ; home X and Y axes,G29 ; auto bed level,G1 X313 Y12 F15000 ; move to side,G1 Z0 ; Level for wipe,M109 S[extruder0_temperature] T0 ; wait for heat,M109 S[extruder1_temperature] T1 ; wait for heat,G90 ; absolute,T0 ; extruder 0,G92 E0,G1 X0 E1 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E0 F85 ; stutter to make sure extruder is turning the right way,G1 E20 F85 ; extrude,G1 X0 F15000 ; wipe,G1 Y15 ; slightly forward so other wipe won't overlap,T1 ; extruder 1,G92 E0 ; reset extrude,G1 X0 E1 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E0 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E20 F85 ; extrude,G1 X250 F15000 ; wipe</startingGcode>
+  <startingGcode>; 12&quot; i3 &amp; i3v 1.75mm ABS for .40 E3Dv6 Double 2016-05-07,; BOTH EXTRUDERS,M80  ; power on,M42 P5 S255 ; light on,M190 S[bed0_temperature] ; wait for bed to heat up,M104 S[extruder0_temperature] T0 ; start heating T0,M104 S[extruder1_temperature] T1 ; start heating T1,G1 Z15 F120 ; lift nozzle,G28 ; home X and Y axes,G29 ; auto bed level,G1 X313 Y12 F15000 ; move to side,G1 Z0 ; Level for wipe,M109 S[extruder0_temperature] T0 ; wait for heat,M109 S[extruder1_temperature] T1 ; wait for heat,G90 ; absolute,T0 ; extruder 0,G92 E0,G1 E1 F85 ; stutter to make sure extruder is turning the right way,G1 	E0 F85 ; stutter to make sure extruder is turning the right way,G1 E20 F85 ; extrude,G1 X0 F15000 ; wipe,G92 E0 ; reset extruder,G1 Y15 ; slightly forward so other wipe won't overlap,T1 ; extruder 1,G92 E0 ; reset extrude,G1 E1 F85 ; stutter to make sure extruder is turning the right way,G1 E0 F85 ; stutter to make sure extruder is turning the right way,G1	 E20 F85 ; extrude,G1 X250 F15000 ; wipe,G92 E0 ; zero extruder</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
@@ -568,7 +568,7 @@
     <useOozeShield>0</useOozeShield>
     <toggleTemperatureController name="Right Extruder" status="on" stabilize="off"/>
     <toggleTemperatureController name="Left Extruder" status="off" stabilize="off"/>
-    <startingGcode>; 12&quot; i3 &amp; i3v 1.75mm ABS for .40 E3Dv6 Double 2016-05-07,; RIGHT NOZZLE ONLY,M80  ; power on,M42 P5 S255 ; light on,M104 S[extruder1_temperature] T1 ; start heating T1,G1 Z15 F120 ; lift nozzle,G28 ; home X and Y axes,G29 ; auto bed level,G1 X0 Y12 F15000 ; move to side,G1 Z0 ; Level for wipe,M109 S[extruder1_temperature] T1 ; wait for heat,G90 ; absolute,T1 ; extruder 1,G92 E0 ; reset extrude,G1 X0 E1 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E0 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E20 F85 ; extrude,G1 X250 F15000 ; wipe</startingGcode>
+    <startingGcode>; 12&quot; i3 &amp; i3v 1.75mm ABS for .40 E3Dv6 Double 2016-05-07,; RIGHT NOZZLE ONLY,M80  ; power on,M42 P5 S255 ; light on,M104 S[extruder1_temperature] T1 ; start heating T1,G1 Z15 F120 ; lift nozzle,G28 ; home X and Y axes,G29 ; auto bed level,G1 X0 Y12 F15000 ; move to side,G1 Z0 ; Level for wipe,M109 S[extruder1_temperature] T1 ; wait for heat,G90 ; absolute,T1 ; extruder 1,G92 E0 ; reset extrude,G1 X0 E1 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E0 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E20 F85 ; extrude,G1 X250 F15000 ; wipe,G92 E0 ; zero extruder	</startingGcode>
   </autoConfigureExtruders>
   <autoConfigureExtruders name="Left Extruder Only" allowedToolheads="1">
     <primaryExtruder>1</primaryExtruder>
@@ -581,19 +581,19 @@
     <useOozeShield>0</useOozeShield>
     <toggleTemperatureController name="Right Extruder" status="off" stabilize="off"/>
     <toggleTemperatureController name="Left Extruder" status="on" stabilize="off"/>
-    <startingGcode>; 12&quot; i3 &amp; i3v 1.75mm ABS for .40 E3Dv6 Double 2016-05-07,; LEFT NOZZLE ONLY,M80  ; power on,M42 P5 S255 ; light on,M104 S[extruder0_temperature] T0 ; start heating T0,G1 Z15 F120 ; lift nozzle,G28 ; home X and Y axes,G29 ; auto bed level,G1 X313 Y12 F15000 ; move to side,G1 Z0 ; Level for wipe,M109 S[extruder0_temperature] T0 ; wait for heat,G90 ; absolute,T0 ; extruder 0,G92 E0 ; reset extrude,G1 X0 E1 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E0 F85 ; stutter to make sure extruder is turning the right way,G1 E20 F85 ; extrude,G1 X0 F15000 ; wipe,</startingGcode>
+    <startingGcode>; 12&quot; i3 &amp; i3v 1.75mm ABS for .40 E3Dv6 Double 2016-05-07,; LEFT NOZZLE ONLY,M80  ; power on,M42 P5 S255 ; light on,M104 S[extruder0_temperature] T0 ; start heating T0,G1 Z15 F120 ; lift nozzle,G28 ; home X and Y axes,G29 ; auto bed level,G1 X313 Y12 F15000 ; move to side,G1 Z0 ; Level for wipe,M109 S[extruder0_temperature] T0 ; wait for heat,G90 ; absolute,T0 ; extruder 0,G92 E0 ; reset extrude,G1 X0 E1 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E0 F85 ; stutter to make sure extruder is turning the right way,G1 E20 F85 ; extrude,G1 X0 F15000 ; wipe,G92 E0	,</startingGcode>
   </autoConfigureExtruders>
   <autoConfigureExtruders name="Both Extruders" allowedToolheads="2">
-    <primaryExtruder>0</primaryExtruder>
+    <primaryExtruder>1</primaryExtruder>
     <raftExtruder>0</raftExtruder>
     <skirtExtruder>0</skirtExtruder>
-    <infillExtruder>0</infillExtruder>
-    <supportExtruder>0</supportExtruder>
+    <infillExtruder>1</infillExtruder>
+    <supportExtruder>1</supportExtruder>
     <useSkirt>0</useSkirt>
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>1</useOozeShield>
     <toggleTemperatureController name="Right Extruder" status="on" stabilize="off"/>
     <toggleTemperatureController name="Left Extruder" status="on" stabilize="off"/>
-    <startingGcode>; 12&quot; i3 &amp; i3v 1.75mm ABS for .40 E3Dv6 Double 2016-05-07,; BOTH EXTRUDERS,M80  ; power on,M42 P5 S255 ; light on,M190 S[bed0_temperature] ; wait for bed to heat up,M104 S[extruder0_temperature] T0 ; start heating T0,M104 S[extruder1_temperature] T1 ; start heating T1,G1 Z15 F120 ; lift nozzle,G28 ; home X and Y axes,G29 ; auto bed level,G1 X313 Y12 F15000 ; move to side,G1 Z0 ; Level for wipe,M109 S[extruder0_temperature] T0 ; wait for heat,M109 S[extruder1_temperature] T1 ; wait for heat,G90 ; absolute,T0 ; extruder 0,G92 E0,G1 X0 E1 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E0 F85 ; stutter to make sure extruder is turning the right way,G1 E20 F85 ; extrude,G1 X0 F15000 ; wipe,G1 Y15 ; slightly forward so other wipe won't overlap,T1 ; extruder 1,G92 E0 ; reset extrude,G1 X0 E1 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E0 F85 ; stutter to make sure extruder is turning the right way,G1 X0 E20 F85 ; extrude,G1 X250 F15000 ; wipe</startingGcode>
+    <startingGcode>; 12&quot; i3 &amp; i3v 1.75mm ABS for .40 E3Dv6 Double 2016-05-07,; BOTH EXTRUDERS,M80  ; power on,M42 P5 S255 ; light on,M190 S[bed0_temperature] ; wait for bed to heat up,M104 S[extruder0_temperature] T0 ; start heating T0,M104 S[extruder1_temperature] T1 ; start heating T1,G1 Z15 F120 ; lift nozzle,G28 ; home X and Y axes,G29 ; auto bed level,G1 X313 Y12 F15000 ; move to side,G1 Z0 ; Level for wipe,M109 S[extruder0_temperature] T0 ; wait for heat,M109 S[extruder1_temperature] T1 ; wait for heat,G90 ; absolute,T0 ; extruder 0,G92 E0,G1 E1 F85 ; stutter to make sure extruder is turning the right way,G1 	E0 F85 ; stutter to make sure extruder is turning the right way,G1 E20 F85 ; extrude,G1 X0 F15000 ; wipe,G92 E0 ; reset extruder,G1 Y15 ; slightly forward so other wipe won't overlap,T1 ; extruder 1,G92 E0 ; reset extrude,G1 E1 F85 ; stutter to make sure extruder is turning the right way,G1 E0 F85 ; stutter to make sure extruder is turning the right way,G1	 E20 F85 ; extrude,G1 X250 F15000 ; wipe,G92 E0 ; zero extruder</startingGcode>
   </autoConfigureExtruders>
 </profile>
