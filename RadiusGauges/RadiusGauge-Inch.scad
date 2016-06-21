@@ -21,14 +21,6 @@ number = RadiusNumerator;
 unit = str("/",RadiusDenominator,"in");
 scale = 25.4/RadiusDenominator;
 
-// Metric
-
-// Radius, in mm
-//Radius = 10;
-//number = Radius;
-//unit = "mm";
-//scale = 1;
-
 // Other Settings
 // Thickness, in mm
 Thickness = 2;

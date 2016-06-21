@@ -11,11 +11,6 @@ mkdir STL\Metric\Large
 
 
 
-FOR /F "tokens=1-3" %%x IN (imperialSizes.txt) DO %OPENSCAD% -o STL\Imperial\%%z\RadiusGauge-%%x-%%y-in.stl -Dnumber=%%x -Dscale=25.4/%%y -Dunit=\"/%%yin\" RadiusGauge.scad
+FOR /F "tokens=1-3" %%x IN (imperialSizes.txt) DO %OPENSCAD% -o STL\Imperial\%%z\RadiusGauge-%%x-%%y-in.stl -DRadiusNumerator=%%x -DRadiusDenominator=%%y RadiusGauge-Inch.scad
 
-%OPENSCAD% -o STL\Imperial\Large\RadiusGauge-1-in.stl -Dnumber=1 -Dscale=25.4 -Dunit=\"in\" RadiusGauge.scad
-
-
-
-
-FOR /F "tokens=1-2" %%x IN (metricSizes.txt) DO %OPENSCAD% -o STL\Metric\%%y\RadiusGauge-%%x-mm.stl -Dnumber=%%x -Dscale=1 -Dunit=\"mm\" RadiusGauge.scad
+FOR /F "tokens=1-2" %%x IN (metricSizes.txt) DO %OPENSCAD% -o STL\Metric\%%y\RadiusGauge-%%x-mm.stl -DRadius=%%x RadiusGauge-MM.scad

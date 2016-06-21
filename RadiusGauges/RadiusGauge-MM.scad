@@ -11,23 +11,12 @@
 //             use a fraction of 25.4, e.g. 25.4/32 for 32nds.
 //
 
-// Imperial
-
-// Numerator of the radius fraction, in inches
-RadiusNumerator = 9;
-// Denominator of the radius fraction, in inches
-RadiusDenominator = 32;
-number = RadiusNumerator;
-unit = str("/",RadiusDenominator,"in");
-scale = 25.4/RadiusDenominator;
-
 // Metric
-
 // Radius, in mm
-//Radius = 10;
-//number = Radius;
-//unit = "mm";
-//scale = 1;
+Radius = 10;
+number = Radius;
+unit = "mm";
+scale = 1;
 
 // Other Settings
 // Thickness, in mm
