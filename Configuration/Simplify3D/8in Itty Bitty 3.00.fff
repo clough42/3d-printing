@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="8&quot; Itty Bitty 3.00" version="2016-05-04 10:13:38" app="S3D-Software 3.0.2">
+<profile name="8&quot; Itty Bitty 3.00" version="2016-07-23 17:37:32" app="S3D-Software 3.0.2">
   <baseProfile>Default</baseProfile>
   <printMaterial>ABS</printMaterial>
   <printQuality>Medium</printQuality>
@@ -32,7 +32,7 @@
   <startPointOriginZ>300</startPointOriginZ>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
-  <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
+  <firstLayerHeightPercentage>90</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
   <useRaft>0</useRaft>
@@ -63,7 +63,7 @@
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
   <infillPercentage>40</infillPercentage>
-  <outlineOverlapPercentage>15</outlineOverlapPercentage>
+  <outlineOverlapPercentage>35</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
@@ -72,8 +72,8 @@
   <generateSupport>0</generateSupport>
   <supportExtruder>0</supportExtruder>
   <supportInfillPercentage>30</supportInfillPercentage>
-  <supportExtraInflation>0</supportExtraInflation>
-  <denseSupportLayers>0</denseSupportLayers>
+  <supportExtraInflation>1</supportExtraInflation>
+  <denseSupportLayers>3</denseSupportLayers>
   <denseSupportInfillPercentage>70</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
   <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
@@ -82,7 +82,7 @@
   <supportType>0</supportType>
   <supportGridSpacing>4</supportGridSpacing>
   <maxOverhangAngle>45</maxOverhangAngle>
-  <supportAngles>0</supportAngles>
+  <supportAngles>45,135</supportAngles>
   <temperatureController name="Extruder 1 Temperature">
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
