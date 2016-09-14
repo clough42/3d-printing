@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<profile name="8&quot; Itty Bitty 3.00" version="2016-07-23 17:37:32" app="S3D-Software 3.0.2">
+<profile name="8&quot; Itty Bitty 3.00" version="2016-08-31 12:52:11" app="S3D-Software 3.0.2">
   <baseProfile>Default</baseProfile>
-  <printMaterial>ABS</printMaterial>
+  <printMaterial>NinjaFlex</printMaterial>
   <printQuality>Medium</printQuality>
   <printExtruders></printExtruders>
   <extruder name="Extruder 1">
@@ -11,7 +11,7 @@
     <width>0.48</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>1</retractionDistance>
+    <retractionDistance>5</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
     <retractionSpeed>1800</retractionSpeed>
@@ -32,7 +32,7 @@
   <startPointOriginZ>300</startPointOriginZ>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
-  <firstLayerHeightPercentage>90</firstLayerHeightPercentage>
+  <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
   <useRaft>0</useRaft>
@@ -42,7 +42,7 @@
   <raftSeparationDistance>0.14</raftSeparationDistance>
   <raftInfill>85</raftInfill>
   <disableRaftBaseLayers>0</disableRaftBaseLayers>
-  <useSkirt>0</useSkirt>
+  <useSkirt>1</useSkirt>
   <skirtExtruder>0</skirtExtruder>
   <skirtLayers>1</skirtLayers>
   <skirtOutlines>2</skirtOutlines>
@@ -89,7 +89,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>0</stabilizeAtStartup>
-    <setpoint layer="1" temperature="250"/>
+    <setpoint layer="1" temperature="215"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>0</temperatureNumber>
@@ -97,8 +97,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>0</stabilizeAtStartup>
-    <setpoint layer="1" temperature="100"/>
-    <setpoint layer="2" temperature="110"/>
+    <setpoint layer="1" temperature="40"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
@@ -154,7 +153,7 @@
   <celebrationSong>Random Song</celebrationSong>
   <createMB5G>0</createMB5G>
   <postProcessing></postProcessing>
-  <defaultSpeed>6000</defaultSpeed>
+  <defaultSpeed>1800</defaultSpeed>
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
@@ -256,4 +255,20 @@
     <infillPercentage>30</infillPercentage>
     <supportInfillPercentage>40</supportInfillPercentage>
   </autoConfigureQuality>
+  <autoConfigureMaterial name="NinjaFlex">
+    <globalExtruderTemperature>215</globalExtruderTemperature>
+    <temperatureController name="Heated Bed">
+      <temperatureNumber>0</temperatureNumber>
+      <isHeatedBed>1</isHeatedBed>
+      <relayBetweenLayers>0</relayBetweenLayers>
+      <relayBetweenLoops>0</relayBetweenLoops>
+      <stabilizeAtStartup>0</stabilizeAtStartup>
+      <setpoint layer="1" temperature="40"/>
+    </temperatureController>
+    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
+    <fanSpeed>
+      <setpoint layer="1" speed="0"/>
+      <setpoint layer="6" speed="60"/>
+    </fanSpeed>
+  </autoConfigureMaterial>
 </profile>
