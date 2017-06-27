@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<profile name="12&quot; Double FLEX 1.75" version="2016-08-19 06:37:36" app="S3D-Software 3.0.2">
+<profile name="12&quot; Double FLEX 1.75" version="2017-06-27 09:26:44" app="S3D-Software 3.1.0">
   <baseProfile>Leapfrog Creatr Dual</baseProfile>
-  <printMaterial>ABS</printMaterial>
-  <printQuality>Medium</printQuality>
+  <printMaterial>PETG</printMaterial>
+  <printQuality>Medium-Slower</printQuality>
   <printExtruders>Left Extruder Only</printExtruders>
   <extruder name="Right Extruder">
     <toolheadNumber>1</toolheadNumber>
@@ -27,13 +27,13 @@
     <width>0.48</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>1</retractionDistance>
+    <retractionDistance>2</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
-    <retractionSpeed>1800</retractionSpeed>
-    <useCoasting>0</useCoasting>
+    <retractionSpeed>1500</retractionSpeed>
+    <useCoasting>1</useCoasting>
     <coastingDistance>0.2</coastingDistance>
-    <useWipe>0</useWipe>
+    <useWipe>1</useWipe>
     <wipeDistance>5</wipeDistance>
   </extruder>
   <primaryExtruder>1</primaryExtruder>
@@ -48,7 +48,7 @@
   <startPointOriginZ>300</startPointOriginZ>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
-  <firstLayerHeightPercentage>90</firstLayerHeightPercentage>
+  <firstLayerHeightPercentage>120</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
   <useRaft>0</useRaft>
@@ -78,7 +78,7 @@
   <infillExtruder>1</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>40</infillPercentage>
+  <infillPercentage>25</infillPercentage>
   <outlineOverlapPercentage>15</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
@@ -121,11 +121,12 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>0</stabilizeAtStartup>
-    <setpoint layer="1" temperature="100"/>
-    <setpoint layer="2" temperature="110"/>
+    <setpoint layer="1" temperature="90"/>
+    <setpoint layer="2" temperature="80"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
+    <setpoint layer="5" speed="100"/>
   </fanSpeed>
   <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
@@ -172,12 +173,11 @@
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
   <endingGcode>M104 S0 T0 ; heat off T0,M104 S0 T1 ; heat off T1,G28 X0 ; home X axis,G28 Y0 ; home Y axis,M84 ; disable motors,M42 P5 S0 ; light off,M190 S0 ; wait for bed temperature to be reached,M81 ; power off</endingGcode>
-  <createX3G>0</createX3G>
+  <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Random Song</celebrationSong>
-  <createMB5G>0</createMB5G>
   <postProcessing></postProcessing>
-  <defaultSpeed>6000</defaultSpeed>
+  <defaultSpeed>3000</defaultSpeed>
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
@@ -213,6 +213,7 @@
   <thinWallAllowedOverlapPercentage>10</thinWallAllowedOverlapPercentage>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureMaterial name="PLA">
+    <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <extruder name="Right Extruder">
       <toolheadNumber>0</toolheadNumber>
       <diameter>0.35</diameter>
@@ -275,6 +276,7 @@
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="ABS">
+    <firstLayerHeightPercentage>90</firstLayerHeightPercentage>
     <extruder name="Right Extruder">
       <toolheadNumber>1</toolheadNumber>
       <diameter>0.4</diameter>
@@ -337,6 +339,7 @@
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="PVA">
+    <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <extruder name="Right Extruder">
       <toolheadNumber>0</toolheadNumber>
       <diameter>0.35</diameter>
@@ -399,6 +402,7 @@
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="Nylon">
+    <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <extruder name="Right Extruder">
       <toolheadNumber>0</toolheadNumber>
       <diameter>0.35</diameter>
@@ -460,6 +464,7 @@
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="PLA (right) PVA (left)">
+    <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
     <extruder name="Right Extruder">
       <toolheadNumber>0</toolheadNumber>
       <diameter>0.35</diameter>
@@ -535,7 +540,7 @@
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>40</infillPercentage>
+    <infillPercentage>25</infillPercentage>
     <supportInfillPercentage>30</supportInfillPercentage>
     <defaultSpeed>6000</defaultSpeed>
   </autoConfigureQuality>
@@ -544,9 +549,9 @@
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>40</infillPercentage>
+    <infillPercentage>25</infillPercentage>
     <supportInfillPercentage>30</supportInfillPercentage>
-    <defaultSpeed>4000</defaultSpeed>
+    <defaultSpeed>3000</defaultSpeed>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
     <layerHeight>0.1</layerHeight>
@@ -597,6 +602,7 @@
     <startingGcode>; 12&quot; i3 &amp; i3v 1.75mm ABS for .40 E3Dv6 Double 2016-05-07,; BOTH EXTRUDERS,M80  ; power on,M42 P5 S255 ; light on,M190 S[bed0_temperature] ; wait for bed to heat up,M104 S[extruder0_temperature] T0 ; start heating T0,M104 S[extruder1_temperature] T1 ; start heating T1,G1 Z15 F120 ; lift nozzle,G28 ; home X and Y axes,G29 ; auto bed level,G1 X313 Y12 F15000 ; move to side,G1 Z0 ; Level for wipe,M109 S[extruder0_temperature] T0 ; wait for heat,M109 S[extruder1_temperature] T1 ; wait for heat,G90 ; absolute,T0 ; extruder 0,G92 E0,G1 E1 F85 ; stutter to make sure extruder is turning the right way,G1 	E0 F85 ; stutter to make sure extruder is turning the right way,G1 E20 F85 ; extrude,G1 X0 F15000 ; wipe,G92 E0 ; reset extruder,G1 Y15 ; slightly forward so other wipe won't overlap,T1 ; extruder 1,G92 E0 ; reset extrude,G1 E1 F85 ; stutter to make sure extruder is turning the right way,G1 E0 F85 ; stutter to make sure extruder is turning the right way,G1	 E20 F85 ; extrude,G1 X250 F15000 ; wipe,G92 E0 ; zero extruder</startingGcode>
   </autoConfigureExtruders>
   <autoConfigureMaterial name="PETG">
+    <firstLayerHeightPercentage>120</firstLayerHeightPercentage>
     <extruder name="Right Extruder">
       <toolheadNumber>1</toolheadNumber>
       <diameter>0.4</diameter>
@@ -643,7 +649,7 @@
       <relayBetweenLayers>0</relayBetweenLayers>
       <relayBetweenLoops>0</relayBetweenLoops>
       <stabilizeAtStartup>0</stabilizeAtStartup>
-      <setpoint layer="1" temperature="250"/>
+      <setpoint layer="1" temperature="255"/>
     </temperatureController>
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
