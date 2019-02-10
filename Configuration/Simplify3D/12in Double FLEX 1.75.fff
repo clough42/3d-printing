@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<profile name="12&quot; Double FLEX 1.75" version="2017-06-27 09:26:44" app="S3D-Software 3.1.0">
+<profile name="12&quot; Double FLEX 1.75" version="2018-12-08 16:43:44" app="S3D-Software 4.0.0">
   <baseProfile>Leapfrog Creatr Dual</baseProfile>
-  <printMaterial>PETG</printMaterial>
-  <printQuality>Medium-Slower</printQuality>
+  <printMaterial>ABS</printMaterial>
+  <printQuality>Medium</printQuality>
   <printExtruders>Left Extruder Only</printExtruders>
   <extruder name="Right Extruder">
     <toolheadNumber>1</toolheadNumber>
@@ -27,41 +27,41 @@
     <width>0.48</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>2</retractionDistance>
+    <retractionDistance>1</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0</retractionZLift>
-    <retractionSpeed>1500</retractionSpeed>
-    <useCoasting>1</useCoasting>
+    <retractionSpeed>1800</retractionSpeed>
+    <useCoasting>0</useCoasting>
     <coastingDistance>0.2</coastingDistance>
-    <useWipe>1</useWipe>
+    <useWipe>0</useWipe>
     <wipeDistance>5</wipeDistance>
   </extruder>
   <primaryExtruder>1</primaryExtruder>
   <layerHeight>0.2</layerHeight>
   <topSolidLayers>3</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
-  <perimeterOutlines>2</perimeterOutlines>
+  <perimeterOutlines>3</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>2</startPointOption>
   <startPointOriginX>0</startPointOriginX>
   <startPointOriginY>0</startPointOriginY>
-  <startPointOriginZ>300</startPointOriginZ>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
-  <firstLayerHeightPercentage>120</firstLayerHeightPercentage>
+  <firstLayerHeightPercentage>90</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
   <useRaft>0</useRaft>
   <raftExtruder>1</raftExtruder>
-  <raftLayers>3</raftLayers>
+  <raftTopLayers>3</raftTopLayers>
+  <raftBaseLayers>2</raftBaseLayers>
   <raftOffset>3</raftOffset>
   <raftSeparationDistance>0.14</raftSeparationDistance>
-  <raftInfill>85</raftInfill>
-  <disableRaftBaseLayers>0</disableRaftBaseLayers>
+  <raftTopInfill>100</raftTopInfill>
+  <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
   <useSkirt>0</useSkirt>
   <skirtExtruder>1</skirtExtruder>
   <skirtLayers>1</skirtLayers>
-  <skirtOutlines>4</skirtOutlines>
+  <skirtOutlines>5</skirtOutlines>
   <skirtOffset>0</skirtOffset>
   <usePrimePillar>0</usePrimePillar>
   <primePillarExtruder>999</primePillarExtruder>
@@ -76,19 +76,22 @@
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
   <infillExtruder>1</infillExtruder>
-  <internalInfillPattern>Rectilinear</internalInfillPattern>
+  <internalInfillPattern>Full Honeycomb</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>25</infillPercentage>
+  <infillPercentage>40</infillPercentage>
   <outlineOverlapPercentage>15</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
-  <infillAngles>45,-45</infillAngles>
-  <overlapInfillAngles>0</overlapInfillAngles>
+  <internalInfillAngles>0,120,-120</internalInfillAngles>
+  <overlapInternalInfillAngles>0</overlapInternalInfillAngles>
+  <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>0</generateSupport>
   <supportExtruder>1</supportExtruder>
   <supportInfillPercentage>30</supportInfillPercentage>
   <supportExtraInflation>0.5</supportExtraInflation>
+  <supportBaseLayers>0</supportBaseLayers>
+  <denseSupportExtruder>1</denseSupportExtruder>
   <denseSupportLayers>3</denseSupportLayers>
   <denseSupportInfillPercentage>70</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
@@ -121,12 +124,12 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>0</stabilizeAtStartup>
-    <setpoint layer="1" temperature="90"/>
-    <setpoint layer="2" temperature="80"/>
+    <setpoint layer="1" temperature="100"/>
+    <setpoint layer="2" temperature="110"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
-    <setpoint layer="5" speed="100"/>
+    <setpoint layer="100" speed="60"/>
   </fanSpeed>
   <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
@@ -177,7 +180,7 @@
   <celebration>0</celebration>
   <celebrationSong>Random Song</celebrationSong>
   <postProcessing></postProcessing>
-  <defaultSpeed>3000</defaultSpeed>
+  <defaultSpeed>6000</defaultSpeed>
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
@@ -187,9 +190,12 @@
   <bridgingExtraInflation>0</bridgingExtraInflation>
   <bridgingExtrusionMultiplier>1</bridgingExtrusionMultiplier>
   <bridgingSpeedMultiplier>1</bridgingSpeedMultiplier>
-  <filamentDiameter>1.75</filamentDiameter>
-  <filamentPricePerKg>22</filamentPricePerKg>
-  <filamentDensity>1.25</filamentDensity>
+  <useFixedBridgingAngle>0</useFixedBridgingAngle>
+  <fixedBridgingAngle>0</fixedBridgingAngle>
+  <applyBridgingToPerimeters>0</applyBridgingToPerimeters>
+  <filamentDiameters>1.75|1.75|1.75|1.75|1.75|1.75</filamentDiameters>
+  <filamentPricesPerKg>22|22|22|22|22|22</filamentPricesPerKg>
+  <filamentDensities>1.25|1.25|1.25|1.25|1.25|1.25</filamentDensities>
   <useMinPrintHeight>0</useMinPrintHeight>
   <minPrintHeight>0</minPrintHeight>
   <useMaxPrintHeight>0</useMaxPrintHeight>
@@ -204,13 +210,18 @@
   <retractionMinTravel>3</retractionMinTravel>
   <retractWhileWiping>0</retractWhileWiping>
   <onlyWipeOutlines>1</onlyWipeOutlines>
-  <avoidCrossingOutline>0</avoidCrossingOutline>
+  <avoidCrossingOutline>1</avoidCrossingOutline>
   <maxMovementDetourFactor>3</maxMovementDetourFactor>
   <toolChangeRetractionDistance>12</toolChangeRetractionDistance>
   <toolChangeExtraRestartDistance>-0.5</toolChangeExtraRestartDistance>
   <toolChangeRetractionSpeed>600</toolChangeRetractionSpeed>
-  <allowThinWallGapFill>1</allowThinWallGapFill>
+  <externalThinWallType>0</externalThinWallType>
+  <internalThinWallType>2</internalThinWallType>
   <thinWallAllowedOverlapPercentage>10</thinWallAllowedOverlapPercentage>
+  <singleExtrusionMinLength>1</singleExtrusionMinLength>
+  <singleExtrusionMinPrintingWidthPercentage>50</singleExtrusionMinPrintingWidthPercentage>
+  <singleExtrusionMaxPrintingWidthPercentage>200</singleExtrusionMaxPrintingWidthPercentage>
+  <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureMaterial name="PLA">
     <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
@@ -336,6 +347,7 @@
     </temperatureController>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
+      <setpoint layer="100" speed="60"/>
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="PVA">
@@ -540,7 +552,7 @@
     <topSolidLayers>3</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>25</infillPercentage>
+    <infillPercentage>40</infillPercentage>
     <supportInfillPercentage>30</supportInfillPercentage>
     <defaultSpeed>6000</defaultSpeed>
   </autoConfigureQuality>
@@ -555,10 +567,10 @@
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
     <layerHeight>0.1</layerHeight>
-    <topSolidLayers>4</topSolidLayers>
-    <bottomSolidLayers>4</bottomSolidLayers>
-    <skirtLayers>2</skirtLayers>
-    <infillPercentage>40</infillPercentage>
+    <topSolidLayers>5</topSolidLayers>
+    <bottomSolidLayers>5</bottomSolidLayers>
+    <skirtLayers>1</skirtLayers>
+    <infillPercentage>25</infillPercentage>
     <supportInfillPercentage>15</supportInfillPercentage>
     <defaultSpeed>3000</defaultSpeed>
   </autoConfigureQuality>
@@ -568,6 +580,7 @@
     <skirtExtruder>0</skirtExtruder>
     <infillExtruder>0</infillExtruder>
     <supportExtruder>0</supportExtruder>
+    <denseSupportExtruder>0</denseSupportExtruder>
     <useSkirt>1</useSkirt>
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>0</useOozeShield>
@@ -581,6 +594,7 @@
     <skirtExtruder>1</skirtExtruder>
     <infillExtruder>1</infillExtruder>
     <supportExtruder>1</supportExtruder>
+    <denseSupportExtruder>1</denseSupportExtruder>
     <useSkirt>0</useSkirt>
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>0</useOozeShield>
@@ -594,6 +608,7 @@
     <skirtExtruder>0</skirtExtruder>
     <infillExtruder>1</infillExtruder>
     <supportExtruder>1</supportExtruder>
+    <denseSupportExtruder>1</denseSupportExtruder>
     <useSkirt>0</useSkirt>
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>1</useOozeShield>
