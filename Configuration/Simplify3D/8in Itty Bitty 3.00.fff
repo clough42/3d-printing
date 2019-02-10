@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="8&quot; Itty Bitty 3.00(2)" version="2018-07-22 12:10:08" app="S3D-Software 4.0.0">
+<profile name="8&quot; Itty Bitty 3.00" version="2018-07-22 12:10:08" app="S3D-Software 4.0.0">
   <baseProfile>Default</baseProfile>
   <printMaterial>NinjaFlex</printMaterial>
   <printQuality>Medium</printQuality>
